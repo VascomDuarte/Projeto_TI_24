@@ -49,7 +49,7 @@ $nome_led = file_get_contents("api/files/arduino/nome.txt");
     <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav color= sky-blue class="navbar navbar-expand-lg navbar-light bg-light"><!--alterar cor e fixar barra-->
       <div class="container-fluid">
         <a class="navbar-brand">Dashboard EI-TI</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,14 +65,16 @@ $nome_led = file_get_contents("api/files/arduino/nome.txt");
             </li>
           </ul>
         </div>
+        <h6 style="padding-left: 10px;"><?php echo ($_SESSION['username']) ?></h6>
         <button class="btn btn-outline-danger" type="button" onclick="window.location.href='logout.php'">Logout</button>
+        <!--alterar para apenas nome de utilizar com drop bar para o logout-->
       </div>
     </nav>
     <div class="container d-flex justify-content-around align-items-center">
       <div id="title-header">
         <h1>Servidor IoT</h1>
-        <h6>user: <?php echo ($_SESSION['username']) ?></h6>
       </div>
+      <!--meter fundo da pagina junto com as credencias dos autores--> 
       <img
         src="imagens/estg.png"
         alt="Imagem ESTG"
@@ -184,3 +186,6 @@ $nome_led = file_get_contents("api/files/arduino/nome.txt");
     ></script>
   </body>
 </html>
+
+<!--criar pagina extra para o armazem que indica a quantidade de espaço livre que há-->
+<!--criar mais um led de cor vermelha, caso o armazem esteja cheio o led acende-->
