@@ -1,0 +1,101 @@
+#TIform {
+    width: 350px;
+    padding: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.sensor {
+    background-color: #93baff;
+}
+
+.atuador {
+    background-color: #ffbf6c;
+}
+
+@media (max-width: 576px) {
+    #TIform {
+        width: 100%;
+        padding: 10px;
+    }
+    .sensor {
+        background-color: #93baff;
+    }
+    .atuador {
+        background-color: #ffbf6c;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    #TIform {
+        width: 80%;
+        padding: 8px;
+    }
+    .sensor {
+        background-color: #93baff;
+    }
+    .atuador {
+        background-color: #ffbf6c;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #TIform {
+        width: 70%;
+        padding: 6px;
+    }
+    .sensor {
+        background-color: #93baff;
+    }
+    .atuador {
+        background-color: #ffbf6c;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    #TIform {
+        width: 60%;
+        padding: 4px;
+    }
+    .sensor {
+        background-color: #93baff;
+    }
+    .atuador {
+        background-color: #ffbf6c;
+    }
+}
+
+@media (min-width: 1200px) {
+    #TIform {
+        width: 50%;
+        padding: 2px;
+    }
+    .sensor {
+        background-color: #93baff;
+    }
+    .atuador {
+        background-color: #ffbf6c;
+    }
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+
+.footerfundo {
+    margin-bottom: 0px !important;
+    background-color: #f8f9fa;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+
+}
+
+.imagem {
+    width: 300px;
+}
