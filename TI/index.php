@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-//função para validar o username e password
+//função para validar o username e password 
 function validateuser($username, $password){
 
   //lê as crendências dos users para uma string
