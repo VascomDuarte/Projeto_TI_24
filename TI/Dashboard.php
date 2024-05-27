@@ -49,40 +49,38 @@ $nome_led = file_get_contents("api/files/arduino/nome.txt");
     <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
-<nav class="navbar navbar-expand-lg navbar-light  fixed-top"> <!-- Alterar cor para azul (bg-primary) e fixar barra no topo (fixed-top) -->
-  <div class="container-fluid">
-    <a class="navbar-brand">Dashboard EI-TI</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="Dashboard.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="historico.php">Histórico</a>
-        </li>
-      </ul>
-    </div>
-      <div class="container d-flex justify-content-around align-items-center">
-        <h1>Servidor IoT</h1>
-      </div>
-    <div class="d-flex" style="padding-left: 20px;"> <!-- Utilize d-flex para alinhar itens à direita -->
-    <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <button class="btn btn-outline-danger" type="button" ><?php echo ($_SESSION['username']) ?></button>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="logout.php">Log Out</a></li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="Dashboard.php">Dashboard EI-TI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="historico.php">Histórico</a>
+            </li>
           </ul>
-        </li>
-      </ul>
-      
+        </div>
+        <button class="btn btn-outline-danger" type="button" onclick="window.location.href='logout.php'">Logout</button>
+      </div>
+    </nav>
+    <div class="container d-flex justify-content-around align-items-center">
+      <div id="title-header">
+        <h1>Servidor IoT</h1>
+        <h6>user: <?php echo ($_SESSION['username']) ?></h6>
+      </div>
+      <img
+        src="imagens/estg.png"
+        alt="Imagem ESTG"
+        style="width: 300px"
+      />
     </div>
-  </div>
-</nav>
-    
+
+    <hr>
     <br>
 
     <div class="container ">
@@ -102,7 +100,7 @@ $nome_led = file_get_contents("api/files/arduino/nome.txt");
                         <p class><b>Atualização: </b><?php
                         echo $valor_hora; 
                         ?> -
-                        <a href="historico.php">Ver Histórico</a></p>
+                        <a href="#">Ver Histórico</a></p>
                 </div>
                 </div>
             </div>
@@ -116,7 +114,7 @@ $nome_led = file_get_contents("api/files/arduino/nome.txt");
                     </div>
                     <div class="card-footer">
                         <p><b>Atualização:</b> 2024/03/10 14:31 -
-                        <a href="historico.php">Ver Histórico</a></p>
+                        <a href="#">Ver Histórico</a></p>
                 </div>
                 </div>
             </div>
@@ -130,7 +128,7 @@ $nome_led = file_get_contents("api/files/arduino/nome.txt");
                     </div>
                     <div class="card-footer">
                         <p><b>Atualização:</b> 2024/03/10 14:31 -
-                        <a href="historico.php">Ver Histórico</a></p>
+                        <a href="#">Ver Histórico</a></p>
                 </div>
             </div>
         </div>
@@ -179,18 +177,6 @@ $nome_led = file_get_contents("api/files/arduino/nome.txt");
         </div>
     </div>
     </div>
-    <hr>
-    <div class="container d-flex justify-content-around align-items-center" >
-      
-      <!--meter fundo da pagina junto com as credencias dos autores--> 
-      <img
-        src="imagens/estg.png"
-        alt="Imagem ESTG"
-        style="width: 200px"
-      />
-    </div>
-
-    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -198,6 +184,3 @@ $nome_led = file_get_contents("api/files/arduino/nome.txt");
     ></script>
   </body>
 </html>
-
-<!--criar pagina extra para o armazem que indica a quantidade de espaço livre que há-->
-<!--criar mais um led de cor vermelha, caso o armazem esteja cheio o led acende-->
